@@ -1,0 +1,113 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4px;
+  max-width: 327px;
+
+  p {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -0.005em;
+    color: #ffffff;
+    margin: 0 0 20px;
+  }
+
+  label {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  input {
+    border: 0;
+    outline: 0;
+    height: 48px;
+    width: 100%;
+    font-size: 15px;
+    line-height: 48px;
+    border-radius: 6px;
+    padding: 0 30px 0;
+    letter-spacing: 0.3px;
+
+    &::placeholder {
+      font-size: inherit;
+      line-height: inherit;
+      letter-spacing: inherit;
+      color: rgba($color: #1c1c1c, $alpha: 0.5);
+    }
+
+    &:focus,
+    &:focus-within {
+      box-shadow: 0 0 0 3px $primary-color;
+    }
+
+    @media (min-width: $width-desktop+px) {
+      &:hover {
+        box-shadow: 0 0 0 3px $primary-color;
+      }
+    }
+  }
+
+  button[type="submit"] {
+    font-family: $font-family-mono;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    height: 51px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background: $primary-color;
+    color: #000000;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 21px;
+    letter-spacing: 0.1px;
+
+    &:focus,
+    &:focus-within {
+      box-shadow: 0 0 0 3px #ffffff;
+    }
+
+    @media (min-width: $width-desktop+px) {
+      &:hover {
+        box-shadow: 0 0 0 3px #ffffff;
+      }
+    }
+
+    &:active {
+      background: lighten($color: $primary-color, $amount: 10);
+    }
+  }
+
+  @media (max-width: $width-desktop+px) {
+    padding: 0;
+
+    p {
+      color: #000000;
+      font-size: 18px;
+      line-height: 28px;
+      max-width: 321px;
+      margin-bottom: 30px;
+    }
+
+    input {
+      padding: 0 20px;
+      border: 1px solid #c9ccd4;
+    }
+  }
+
+  @media (max-width: $width-tablet+px) {
+    p {
+      margin-bottom: 20px;
+    }
+
+    input {
+      padding: 0 25px;
+    }
+  }
+}

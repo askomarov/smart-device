@@ -1,0 +1,19 @@
+.page {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr min-content;
+  height: 100%;
+  font-family: $font-family-mono;
+}
+
+.page.lock {
+  overflow: hidden;
+}
+
+.page--no-js {
+  .hero__container {
+    @media (max-width: $width-desktop+px) {
+      margin-top: 0;
+    }
+  }
+}

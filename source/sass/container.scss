@@ -1,0 +1,29 @@
+// - мобильная версия — 320px - 767px;
+// - планшетная версия — 768px - 1023px;
+// - десктопная версия — от 1024px и выше
+
+// На ширине от 1024 до минимальной ширины контента
+// необходимо использовать резину, например, уменьшать отступы,
+// расстояния между элементами, размеры карточек и контента.
+
+$min-width: 320;
+$max-width: 1420;
+$width-mobile: 320;
+$width-tablet: 767.9;
+$width-desktop: 1023.9;
+
+.container {
+  box-sizing: border-box;
+  max-width: $max-width + px;
+  padding: 0;
+  margin: 0 auto;
+
+  @media (max-width: $width-desktop+px) {
+  }
+
+  @media (max-width: $width-tablet+px) {
+    min-width: $min-width + px;
+    padding: 0 25px;
+    max-width: 100%;
+  }
+}

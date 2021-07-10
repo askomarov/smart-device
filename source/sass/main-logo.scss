@@ -1,0 +1,60 @@
+.main-logo {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: repeat(2, min-content);
+  width: 202px;
+  justify-content: start;
+  justify-items: start;
+  align-items: start;
+}
+
+.main-logo--light {
+  @media (max-width: $width-tablet+px) {
+    grid-template-columns: 1fr;
+    width: auto;
+
+    .main-logo__icon {
+      width: 38px;
+      height: 38px;
+      margin-right: 0;
+    }
+
+    .main-logo__title {
+      display: none;
+    }
+    
+    .main-logo__subtext {
+      display: none;
+    }
+  }
+}
+
+.main-logo--dark {
+  width: 216px;
+  .main-logo__title {
+    color: $color-dark1;
+  }
+}
+.main-logo__icon {
+  grid-row: 1/-1;
+  margin-right: 16px;
+}
+
+.main-logo__title {
+  font-family: $font-family-roboto-condensed;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 29px;
+  color: $color-white;
+  margin-top: 6px;
+  user-select: none;
+}
+
+.main-logo__subtext {
+  font-family: $font-family-roboto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: $color-gray1;
+  user-select: none;
+}
