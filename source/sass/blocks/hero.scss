@@ -124,7 +124,7 @@
   margin-left: 94px;
   position: relative;
   z-index: 3;
-  
+
   @media (max-width: $width-desktop+px) {
     max-width: 379px;
     margin-left: calc(48 / 768 * 100vw);
