@@ -7,6 +7,14 @@
   height: auto;
 }
 
+.page.lock {
+  --lock-pad: 17px;
+
+  .header {
+    min-width: calc(100% - var(--lock-pad));
+  }
+}
+
 .header__container {
   max-width: 1470px;
   padding: 33px 25px;
@@ -50,6 +58,7 @@
     @media (max-width: $width-desktop+px) {
       margin-right: 33px;
     }
+
     @media (max-width: $width-tablet+px) {
       margin-right: 23px;
     }
@@ -70,6 +79,7 @@
       fill: $color-white;
     }
   }
+
   &:focus,
   &:focus-within {
     outline: 1px solid $primary-color;

@@ -36,6 +36,7 @@
     padding-left: calc(88 / 768 * 100vw);
     padding-right: calc(88 / 768 * 100vw);
   }
+
   @media (max-width: $width-tablet+px) {
     padding-left: 15px;
     padding-right: 15px;
@@ -140,6 +141,7 @@
     .hero__btn-text-mobile {
       display: block;
     }
+
     span:not(.hero__btn-text-mobile) {
       display: none;
     }
@@ -244,6 +246,7 @@
     top: 114px;
     right: -205px;
   }
+
   @media (max-width: $width-tablet+px) {
     width: 301px;
     height: 220px;

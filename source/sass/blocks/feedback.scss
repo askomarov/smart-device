@@ -1,0 +1,46 @@
+.feedback {
+  background: $primary-color;
+  background-image: url("../img/img-form-plane.png"), url("../img/form-decor-all.png");
+  background-repeat: no-repeat;
+  background-size: 511px 288px, 1745px 764px;
+  background-position: calc(350 / 1920 * 100vw) 161px, 155px -60px;
+
+  @media (max-width: 1520px) {
+    background-position: 5vw 161px, left center;
+  }
+
+  @media (max-width: $width-desktop+px) {
+    background: $primary-color;
+  }
+}
+
+.feedback__container {
+  max-width: 1220px;
+  padding: 96px 25px 114px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+
+  @media (max-width: $width-desktop+px) {
+    grid-template-columns: 1fr;
+    padding-top: 83px;
+    padding-bottom: 103px;
+    max-width: 640px;
+  }
+
+  @media (max-width: $width-tablet+px) {
+    padding-top: 33px;
+    padding-bottom: 41px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.feedback__form {
+  grid-column: 2/3;
+  color: $color-white;
+
+  @media (max-width: $width-desktop+px) {
+    grid-column: initial;
+  }
+}

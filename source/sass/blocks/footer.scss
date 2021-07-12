@@ -91,6 +91,7 @@
 
 .footer__logo {
   grid-area: logo;
+
   @media (max-width: $width-desktop+px) {
     align-self: center;
   }
@@ -120,6 +121,7 @@
 
 .footer__menu {
   grid-area: menu;
+
   @media (max-width: $width-desktop+px) {
     margin-bottom: 33px;
   }
@@ -201,6 +203,7 @@
     font-size: 15px;
     line-height: 25px;
     color: rgba($color: #1b2d37, $alpha: 0.5);
+
     &:not(:first-child) {
       white-space: nowrap;
     }
@@ -215,6 +218,7 @@
 
 .footer__copy {
   grid-area: copy;
+
   @media (max-width: $width-desktop+px) {
     display: none;
   }
@@ -222,9 +226,11 @@
 
 .footer__companydate {
   grid-area: companydate;
+
   @media (max-width: $width-desktop+px) {
     align-self: center;
   }
+
   @media (max-width: $width-tablet+px) {
     justify-self: center;
   }

@@ -41,9 +41,6 @@
   }
 }
 
-.feauters__item {
-}
-
 .feauters-item {
   position: relative;
   cursor: pointer;
@@ -92,6 +89,7 @@
       left: 27px;
     }
   }
+
   @media (hover) and (pointer: fine) {
     &:hover {
       background: $primary-color;
@@ -106,16 +104,4 @@
       }
     }
   }
-}
-
-.feauters-item--time {
-}
-
-.feauters-item--suppliers {
-}
-
-.feauters-item--privacy {
-}
-
-.feauters-item--cost {
 }
