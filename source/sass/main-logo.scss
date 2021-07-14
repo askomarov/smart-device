@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: min-content 1fr;
   grid-template-rows: repeat(2, min-content);
-  width: 202px;
+  width: 205px;
   justify-content: start;
   justify-items: start;
   align-items: start;
@@ -30,14 +30,26 @@
 }
 
 .main-logo--dark {
-  width: 216px;
+  width: 222px;
+
   .main-logo__title {
     color: $color-dark1;
+    letter-spacing: 1.4px;
+  }
+
+  .main-logo__icon {
+    margin-left: 2px;
   }
 }
+
 .main-logo__icon {
   grid-row: 1/-1;
   margin-right: 16px;
+  margin-left: 3px;
+
+  @media (max-width: $width-desktop+px) {
+    margin-left: 0;
+  }
 }
 
 .main-logo__title {

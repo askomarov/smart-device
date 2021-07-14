@@ -145,6 +145,8 @@ const closeModal = () => {
   document.removeEventListener('keydown', onEscKeydownCloseModal);
   document.removeEventListener('click', onClickAwayCloseModal);
   inputTelModalForm.removeEventListener('keydown', bindHelpOnInputTel);
+  header.setAttribute('aria-hidden', 'false');
+  footer.setAttribute('aria-hidden', 'false');
 };
 
 const onBtnCloseModal = (btnClose) => {
@@ -187,6 +189,9 @@ const openModal = () => {
 
   addListenerOnOpenModal();
   inputTelModalForm.addEventListener('keydown', bindHelpOnInputTel);
+
+  header.setAttribute('aria-hidden', 'true');
+  footer.setAttribute('aria-hidden', 'true');
 };
 
 const onSuccessSubmit = () => {
@@ -206,7 +211,8 @@ const onSubmitModalFormSendData = () => {
 };
 
 const onBtnShowModal = (btn) => {
-  btn.addEventListener('click', () => {
+  btn.addEventListener('click', (evt) => {
+    evt.preventDefault();
     openModal();
     onSubmitModalFormSendData();
   });

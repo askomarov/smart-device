@@ -1,6 +1,6 @@
 .hero {
   padding-top: calc(var(--header-height) + 198px);
-  padding-bottom: 278px;
+  padding-bottom: 275px;
   background: $color-background url("../img/img-main-background.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -54,19 +54,19 @@
     letter-spacing: 0.07em;
     text-transform: uppercase;
     z-index: 3;
-    margin-bottom: 31px;
+    margin-bottom: 26px;
 
     @media (max-width: $width-desktop+px) {
       font-size: 60px;
       line-height: 70px;
       max-width: 340px;
-      margin-bottom: 32px;
+      margin-bottom: 29px;
     }
 
     @media (max-width: $width-tablet+px) {
       font-size: 40px;
       line-height: 47px;
-      margin-bottom: 30px;
+      margin-bottom: 27px;
     }
   }
 
@@ -81,19 +81,20 @@
     line-height: calc(34 / 22 * 100%);
     color: $color-white;
     position: relative;
-    margin-bottom: 37px;
+    margin-bottom: 46px;
 
     @media (max-width: $width-desktop+px) {
       font-size: 18px;
       line-height: 28px;
       padding-left: 48px;
       max-width: 404px;
+      margin-bottom: 55px;
     }
 
     @media (max-width: $width-tablet+px) {
       font-size: 16px;
       line-height: 25px;
-      margin-bottom: 42px;
+      margin-bottom: 41px;
     }
 
     &::before {
@@ -108,7 +109,8 @@
       @media (max-width: $width-desktop+px) {
         margin-right: 15px;
         width: 33px;
-        top: 14px;
+        top: 16px;
+        left: 3px;
       }
     }
   }
@@ -122,13 +124,13 @@
   font-size: 16px;
   line-height: 19px;
   min-height: 55px;
-  margin-left: 94px;
+  margin-left: 97px;
   position: relative;
   z-index: 3;
 
   @media (max-width: $width-desktop+px) {
     max-width: 379px;
-    margin-left: calc(48 / 768 * 100vw);
+    margin-left: calc(51 / 768 * 100vw);
   }
 
   .hero__btn-text-mobile {
@@ -167,7 +169,7 @@
   cursor: pointer;
   position: absolute;
   bottom: 122px;
-  left: calc(200 / 1920 * 100vw);
+  left: calc(117 / 1920 * 100vw);
   transform: rotate(-90deg);
   z-index: 10;
   display: inline-flex;
@@ -200,7 +202,7 @@
 .hero__main-img {
   position: absolute;
   top: 258px;
-  right: calc(177 / 1920 * 100vw);
+  right: calc(86 / 1920 * 100vw);
   width: calc(705 / 1470 * 100vw);
   max-width: 705px;
   height: 515px;
@@ -210,7 +212,7 @@
     position: absolute;
     z-index: -1;
     top: -140px;
-    left: 0;
+    left: -8px;
     width: 671px;
     height: 641px;
     background: url("../img/img-main-decor.svg");
@@ -218,15 +220,16 @@
 
     @media (max-width: $width-desktop+px) {
       width: 529px;
-      height: 502px;
-      left: -65px;
+      height: 505px;
+      left: -70px;
+      top: -152px;
     }
 
     @media (max-width: $width-tablet+px) {
       width: 505px;
-      height: 480px;
-      left: 125px;
-      top: -135px;
+      height: 481px;
+      left: 126px;
+      top: -137px;
     }
   }
 
@@ -243,7 +246,7 @@
   @media (max-width: $width-desktop+px) {
     width: 465px;
     height: 340px;
-    top: 114px;
+    top: 113px;
     right: -205px;
   }
 

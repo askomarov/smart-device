@@ -63,3 +63,11 @@
     }
   }
 }
+
+.accordion--open {
+  &.footer__address {
+    @media (max-width: $width-tablet+px) {
+      padding-bottom: 26px;
+    }
+  }
+}

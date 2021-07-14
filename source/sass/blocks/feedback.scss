@@ -3,7 +3,7 @@
   background-image: url("../img/img-form-plane.png"), url("../img/form-decor-all.png");
   background-repeat: no-repeat;
   background-size: 511px 288px, 1745px 764px;
-  background-position: calc(350 / 1920 * 100vw) 161px, 155px -60px;
+  background-position: calc(279 / 1920 * 100vw) 161px, 75px -60px;
 
   @media (max-width: 1520px) {
     background-position: 5vw 161px, left center;
@@ -16,23 +16,20 @@
 
 .feedback__container {
   max-width: 1220px;
-  padding: 96px 25px 114px;
+  padding: 92px 25px 113px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 30px;
 
   @media (max-width: $width-desktop+px) {
     grid-template-columns: 1fr;
-    padding-top: 83px;
-    padding-bottom: 103px;
+    padding-top: 80px;
+    padding-bottom: 105px;
     max-width: 640px;
   }
 
   @media (max-width: $width-tablet+px) {
-    padding-top: 33px;
-    padding-bottom: 41px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 30px 15px 42px;
   }
 }
 

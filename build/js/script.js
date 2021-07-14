@@ -15,15 +15,6 @@ const addcordion = (mainBtns) => {
       });
       btn.parentElement.classList.toggle('accordion--open');
     });
-    // btn.addEventListener('click', (evt) => {
-    //   evt.target.parentElement.classList.toggle('accordion--open');
-    //   if (index === 0) {
-    //     accordionBtns[1].parentElement.classList.remove('accordion--open');
-    //   }
-    //   if (index === 1) {
-    //     accordionBtns[0].parentElement.classList.remove('accordion--open');
-    //   }
-    // });
   });
 };
 
@@ -154,6 +145,8 @@ const closeModal = () => {
   document.removeEventListener('keydown', onEscKeydownCloseModal);
   document.removeEventListener('click', onClickAwayCloseModal);
   inputTelModalForm.removeEventListener('keydown', bindHelpOnInputTel);
+  header.setAttribute('aria-hidden', 'false');
+  footer.setAttribute('aria-hidden', 'false');
 };
 
 const onBtnCloseModal = (btnClose) => {
@@ -161,7 +154,7 @@ const onBtnCloseModal = (btnClose) => {
     btnClose.addEventListener('click', (evt) => {
       evt.preventDefault();
       closeModal();
-    }, { once: true });
+    }, {once: true});
   }
 };
 
@@ -196,6 +189,9 @@ const openModal = () => {
 
   addListenerOnOpenModal();
   inputTelModalForm.addEventListener('keydown', bindHelpOnInputTel);
+
+  header.setAttribute('aria-hidden', 'true');
+  footer.setAttribute('aria-hidden', 'true');
 };
 
 const onSuccessSubmit = () => {
@@ -211,11 +207,12 @@ const onSubmitModalFormSendData = () => {
     localStorage.setItem('modal-tel', inputTelModalForm.value);
     localStorage.setItem('modal-mail', inputNameModalForm.value);
     onSuccessSubmit();
-  }, { once: true });
+  }, {once: true});
 };
 
 const onBtnShowModal = (btn) => {
-  btn.addEventListener('click', () => {
+  btn.addEventListener('click', (evt) => {
+    evt.preventDefault();
     openModal();
     onSubmitModalFormSendData();
   });
@@ -224,8 +221,6 @@ const onBtnShowModal = (btn) => {
 
 document.addEventListener('DOMContentLoaded', () => {
   document.body.classList.remove('page--no-js');
-  // headerMenu.classList.remove('header-menu--no-js');
-  // headerMenu.classList.add('header-menu--closed');
 
   // аккордион в подвале на мобильном
   onMobileShowFooterAccordionMenu(accordionBtns);

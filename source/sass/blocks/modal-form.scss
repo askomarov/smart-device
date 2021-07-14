@@ -25,12 +25,17 @@
 
 .modal__wrapper {
   max-width: 490px;
-  padding: 33px 40px 36px;
+  min-height: 605px;
+  padding: 30px 40px 36px;
   background: $primary-color;
+  display: grid;
+  align-items: start;
 }
 
 .modal__form {
   color: $color-white;
+  display: grid;
+  align-items: start;
 
   .form__btn-close {
     cursor: pointer;
@@ -42,8 +47,8 @@
     height: 40px;
     fill: $color-white;
     position: absolute;
-    right: -20px;
-    top: -20px;
+    right: -31px;
+    top: -25px;
 
     svg {
       width: 17px;
@@ -51,17 +56,46 @@
     }
   }
 
+  h1 {
+    font-size: 28px;
+    line-height: 140%;
+    margin-bottom: 13px;
+  }
+
   p {
-    margin: 0 0 30px;
+    margin: 0 0 31px;
+    padding-right: 20px;
   }
 
   fieldset {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 31px;
     margin: 0 0 30px;
   }
 
   textarea {
-    margin: 0 0 30px;
+    height: 104px;
+    margin: 0 0 31px;
+    padding-left: 23px;
+  }
+
+  input:not([type="checkbox"]) {
+    height: 51px;
+    padding: 0 23px;
+  }
+
+  button[type="submit"] {
+    margin-bottom: 0;
+    height: 47px;
+  }
+
+  .form__label-checkox {
+    padding-right: 20px;
+    padding-left: 48px;
+
+    &::after {
+      top: 5px;
+      left: -1px;
+    }
   }
 }

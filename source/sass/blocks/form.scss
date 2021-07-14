@@ -44,14 +44,19 @@
       margin-bottom: 0;
     }
 
+    @media (max-width: $width-desktop+px) {
+      margin-bottom: 42px;
+    }
+
     @media (max-width: $width-tablet+px) {
-      margin-bottom: 30px;
+      margin-bottom: 31px;
       grid-template-columns: 1fr;
+      gap: 31px;
     }
   }
 
   h1 {
-    margin: 0 0 8px;
+    margin: 0 0 10px -4px;
     font-family: $font-family-roboto-condensed;
     font-weight: normal;
     font-size: 36px;
@@ -60,11 +65,12 @@
 
     @media (max-width: $width-desktop+px) {
       font-size: 32px;
+      margin-bottom: 17px;
     }
 
     @media (max-width: $width-tablet+px) {
       font-size: 28px;
-      margin-bottom: 20px;
+      margin-bottom: 13px;
     }
   }
 
@@ -73,10 +79,14 @@
     font-size: 16px;
     line-height: 22px;
     color: inherit;
-    margin: 0 0 49px;
+    margin: 0 0 51px;
+
+    @media (max-width: $width-desktop+px) {
+      margin-bottom: 54px;
+    }
 
     @media (max-width: $width-tablet+px) {
-      margin: 0 0 24px;
+      margin: 0 0 26px;
     }
   }
 
@@ -114,6 +124,10 @@
       &:hover {
         background: rgba($color: #ffffff, $alpha: 0.3);
       }
+    }
+
+    @media (max-width: $width-desktop+px) {
+      height: 51px;
     }
   }
 
@@ -154,7 +168,7 @@
     font-size: 16px;
     line-height: 22px;
     padding: 13px 17px;
-    margin: 0 0 43px;
+    margin: 0 0 39px;
 
     &::placeholder {
       font-size: inherit;
@@ -165,12 +179,12 @@
 
     @media (max-width: $width-desktop+px) {
       height: 160px;
-      margin-bottom: 44px;
+      margin-bottom: 40px;
     }
 
     @media (max-width: $width-tablet+px) {
       height: 104px;
-      margin-bottom: 30px;
+      margin-bottom: 26px;
     }
 
     @media (hover) and (pointer: fine) {
@@ -206,6 +220,10 @@
     text-align: center;
     letter-spacing: 0.05em;
 
+    @media (max-width: $width-tablet+px) {
+      height: 46px;
+    }
+
     @media (hover) and (pointer: fine) {
       &:hover {
         background: rgba($color: #ffffff, $alpha: 0.3);
@@ -226,7 +244,7 @@
 .form__label-checkox {
   cursor: pointer;
   position: relative;
-  padding-left: 32px;
+  padding-left: 40px;
   font-size: 14px;
   line-height: 16px;
   color: rgba($color: #ffffff, $alpha: 0.8);
@@ -234,18 +252,33 @@
   &::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 2px;
+    left: 8px;
     width: 16px;
     height: 16px;
     border: 1px solid $color-white;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: $width-desktop+px) {
+      top: 3px;
+      left: 11px;
+    }
+
+    @media (max-width: $width-tablet+px) {
+      top: 1px;
+      left: 1px;
+    }
+  }
+
+  @media (max-width: $width-desktop+px) {
+    padding-left: 45px;
   }
 
   @media (max-width: $width-tablet+px) {
     max-width: 230px;
+    padding-left: 34px;
   }
 
   @media (hover) and (pointer: fine) {

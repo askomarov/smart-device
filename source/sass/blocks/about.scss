@@ -1,13 +1,14 @@
 .about {
-  padding: 110px 6px 110px 180px;
+  padding: 118px 6px 110px 180px;
   position: relative;
   overflow: hidden;
 
   @media (max-width: $width-desktop+px) {
-    padding: 60px 0 83px 180px;
+    padding: 67px 0 83px 185px;
   }
 
   @media (max-width: $width-tablet+px) {
+    padding-bottom: 65px;
     padding-left: 0;
   }
 
@@ -17,15 +18,16 @@
     font-size: 36px;
     line-height: calc(36 / 51 * 100%);
     color: $color-text;
-    margin: 0 0 28px;
+    margin: 0 0 34px;
 
     @media (max-width: $width-desktop+px) {
       font-size: 32px;
-      margin-bottom: 24px;
+      margin-bottom: 37px;
     }
 
     @media (max-width: $width-tablet+px) {
       font-size: 28px;
+      margin-bottom: 30px;
     }
   }
 
@@ -35,19 +37,44 @@
     color: $color-text;
     margin: 0;
 
-    &:not(:last-child) {
-      margin-bottom: 21px;
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
 
       @media (max-width: $width-tablet+px) {
         margin-bottom: 43px;
       }
     }
 
-    &:last-child {
-      margin-bottom: 38px;
+    &:last-of-type {
+      margin-bottom: 39px;
 
       @media (max-width: $width-desktop+px) {
-        margin-bottom: 34px;
+        height: 90px;
+        overflow: hidden;
+        position: relative;
+
+        &::after {
+          content: "..";
+          position: absolute;
+          right: 4px;
+          bottom: 3px;
+        }
+      }
+
+      @media (max-width: $width-tablet+px) {
+        height: 173px;
+        margin-bottom: 29px;
+
+        &::after {
+          content: "..";
+          position: absolute;
+          position: relative;
+          right: 6px;
+          bottom: initial;
+        }
+        span {
+          display: none;
+        }
       }
     }
   }
@@ -57,6 +84,10 @@
   color: $primary-color;
   border-color: $primary-color;
   max-width: 180px;
+
+  @media (max-width: $width-desktop+px) {
+    margin-left: 3px;
+  }
 
   @media (hover) {
     &:hover {
@@ -73,12 +104,13 @@
   background: url("../img/date-background.png") no-repeat;
   background-size: 860px 484px;
   position: absolute;
-  top: 156px;
-  left: -100px;
+  top: 176px;
+  left: -97px;
   transform: rotate(-90deg);
 
   @media (max-width: $width-desktop+px) {
-    top: 110px;
+    top: 129px;
+    left: -110px;
   }
 
   @media (max-width: $width-tablet+px) {
@@ -94,4 +126,8 @@
   background: #fff;
   box-shadow: 0 0 0 2px white;
   mix-blend-mode: screen;
+
+  @media (max-width: $width-desktop+px) {
+    font-size: 178px;
+  }
 }

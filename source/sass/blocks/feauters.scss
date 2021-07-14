@@ -1,7 +1,7 @@
 .feauters {
   background: url("../img/feat_decor_all.png") no-repeat;
-  background-size: 2242px 1346px;
-  background-position: -62px -58px;
+  background-size: 1920px 1346px;
+  background-position: -100px -30px;
 
   @media (max-width: $width-desktop+px) {
     background: url("../img/feat_decor_1.png") no-repeat;
@@ -44,19 +44,21 @@
 .feauters-item {
   position: relative;
   cursor: pointer;
+  padding: 94px 39px 66px 41px;
+  min-height: 299px;
   background: #ffffff;
   border: 1px solid #ebebeb;
-  padding: 98px 42px 49px 45px;
-  box-shadow: inset 3px 0 0 0 $primary-color;
+  border-left: 3px solid $primary-color;
   transition: $transition;
   fill: $primary-color;
 
   @media (max-width: $width-desktop+px) {
-    padding: 70px 21px 25px 28px;
+    padding: 66px 21px 19px 24px;
+    min-height: 232px;
   }
 
   @media (max-width: $width-tablet+px) {
-    padding: 75px 12px 20px 27px;
+    padding: 25px 12px 22px 25px;
   }
 
   h2 {
@@ -66,6 +68,10 @@
     font-size: 24px;
     line-height: 34px;
     color: $primary-color;
+
+    @media (max-width: $width-desktop+px) {
+      margin-bottom: 9px;
+    }
 
     @media (max-width: $width-tablet+px) {
       font-size: 20px;
@@ -85,8 +91,15 @@
     left: 45px;
 
     @media (max-width: $width-desktop+px) {
-      top: 25px;
-      left: 27px;
+      top: 23px;
+      left: 23px;
+    }
+
+    @media (max-width: $width-tablet+px) {
+      position: relative;
+      top: initial;
+      left: initial;
+      margin-bottom: 9px;
     }
   }
 
@@ -102,6 +115,43 @@
       p {
         color: $color-white;
       }
+    }
+  }
+}
+
+.feauters-item--hired {
+  @media (max-width: $width-tablet+px) {
+    padding-top: 20px;
+    padding-left: 23px;
+    padding-bottom: 27px;
+  }
+}
+
+.feauters-item--detective {
+  @media (max-width: $width-tablet+px) {
+    padding-top: 23px;
+    padding-left: 23px;
+
+    svg {
+      margin-bottom: 4px;
+    }
+
+    h2 {
+      margin-bottom: 17px;
+    }
+  }
+}
+
+.feauters-item--tag {
+  @media (max-width: $width-tablet+px) {
+    padding-bottom: 19px;
+
+    svg {
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      margin-bottom: 16px;
     }
   }
 }
