@@ -55,7 +55,7 @@
     }
   }
 
-  h1 {
+  h2 {
     margin: 0 0 10px -4px;
     font-family: $font-family-roboto-condensed;
     font-weight: normal;
@@ -309,5 +309,36 @@
 
   &:active {
     background: rgba($color: #ffffff, $alpha: 0.1);
+  }
+}
+
+.form--modal {
+  .form__btn-close {
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    fill: $color-white;
+    position: absolute;
+    right: -31px;
+    top: -25px;
+
+    svg {
+      width: 17px;
+      height: 17px;
+    }
+  }
+
+  .form__label-checkox {
+    padding-right: 20px;
+    padding-left: 48px;
+
+    &::after {
+      top: 5px;
+      left: -1px;
+    }
   }
 }

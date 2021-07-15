@@ -1,0 +1,42 @@
+.footer-menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  columns: 2;
+  gap: 10px;
+
+  a {
+    font-family: $font-family-mono;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 25px;
+    color: rgba($color: #1b2d37, $alpha: 0.5);
+
+    @media (max-width: $width-desktop+px) {
+      letter-spacing: normal;
+    }
+
+    &:focus,
+    &:focus-within {
+      color: $primary-color;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  @media (max-width: $width-desktop+px) {
+    columns: 1;
+    gap: 0;
+  }
+  @media (max-width: $width-tablet+px) {
+    padding-right: 15px;
+  }
+
+  @media (min-width: $width-tablet+px) {
+    a:hover {
+      color: $primary-color;
+    }
+  }
+}

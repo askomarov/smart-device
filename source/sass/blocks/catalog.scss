@@ -2,7 +2,7 @@
   background: $color-background;
   color: $color-white;
 
-  h1 {
+  h2 {
     font-family: $font-family-roboto-condensed;
     margin: 0 0 52px;
     color: inherit;
@@ -67,7 +67,7 @@
     min-height: 256px;
   }
 
-  h2 {
+  h3 {
     margin: 0;
     position: absolute;
     z-index: 3;
@@ -92,7 +92,7 @@
   }
 
   &:last-child {
-    h2 {
+    h3 {
       @media (max-width: $width-desktop+px) {
         top: 50px;
       }

@@ -37,26 +37,7 @@
   display: grid;
   align-items: start;
 
-  .form__btn-close {
-    cursor: pointer;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    fill: $color-white;
-    position: absolute;
-    right: -31px;
-    top: -25px;
-
-    svg {
-      width: 17px;
-      height: 17px;
-    }
-  }
-
-  h1 {
+  h2 {
     font-size: 28px;
     line-height: 140%;
     margin-bottom: 13px;
@@ -87,15 +68,5 @@
   button[type="submit"] {
     margin-bottom: 0;
     height: 47px;
-  }
-
-  .form__label-checkox {
-    padding-right: 20px;
-    padding-left: 48px;
-
-    &::after {
-      top: 5px;
-      left: -1px;
-    }
   }
 }
