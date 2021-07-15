@@ -35,6 +35,31 @@
   align-items: center;
 }
 
+.header-menu__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 202;
+  height: 52;
+
+  .header-menu__logo-icon--mobile {
+    display: none;
+  }
+
+  @media (max-width: $width-tablet+px) {
+    .header-menu__logo-icon--full {
+      display: none;
+    }
+
+    .header-menu__logo-icon--mobile {
+      display: flex;
+    }
+
+    width: 38px;
+    height: 38px;
+  }
+}
+
 .header-menu__list {
   flex: 1 1 auto;
   list-style: none;
