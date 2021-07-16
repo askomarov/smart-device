@@ -221,13 +221,10 @@ const onBtnShowModal = (btn) => {
 
 document.addEventListener('DOMContentLoaded', () => {
   document.body.classList.remove('page--no-js');
-
-
   // аккордион в подвале на мобильном
   if (accordionBtns) {
     onMobileShowFooterAccordionMenu(accordionBtns);
   }
-
   // форма обратной свзяи
   if (phoneInput) {
     ipnutTelHelperListener(phoneInput);
@@ -235,10 +232,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (feedbackForm) {
     onSubmitFeadbackForm();
   }
-
   // модальное окно
-  if (buttonOpenModal) {
+  if (buttonOpenModal && modalForm) {
     onBtnShowModal(buttonOpenModal);
   }
-
 });

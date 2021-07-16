@@ -154,7 +154,7 @@ const onBtnCloseModal = (btnClose) => {
     btnClose.addEventListener('click', (evt) => {
       evt.preventDefault();
       closeModal();
-    }, {once: true});
+    }, { once: true });
   }
 };
 
@@ -207,7 +207,7 @@ const onSubmitModalFormSendData = () => {
     localStorage.setItem('modal-tel', inputTelModalForm.value);
     localStorage.setItem('modal-mail', inputNameModalForm.value);
     onSuccessSubmit();
-  }, {once: true});
+  }, { once: true });
 };
 
 const onBtnShowModal = (btn) => {
@@ -221,13 +221,10 @@ const onBtnShowModal = (btn) => {
 
 document.addEventListener('DOMContentLoaded', () => {
   document.body.classList.remove('page--no-js');
-
-
   // аккордион в подвале на мобильном
   if (accordionBtns) {
     onMobileShowFooterAccordionMenu(accordionBtns);
   }
-
   // форма обратной свзяи
   if (phoneInput) {
     ipnutTelHelperListener(phoneInput);
@@ -235,10 +232,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (feedbackForm) {
     onSubmitFeadbackForm();
   }
-
   // модальное окно
-  if (buttonOpenModal) {
+  if (buttonOpenModal && modalForm) {
     onBtnShowModal(buttonOpenModal);
   }
-
 });
