@@ -41,6 +41,9 @@
     padding-left: 15px;
     padding-right: 15px;
   }
+  @media (min-width: 1920px) {
+    position: relative;
+  }
 
   h2 {
     position: relative;
@@ -197,6 +200,11 @@
   @media (max-width: $width-desktop+px) {
     display: none;
   }
+
+  @media (min-width: 1920px) {
+    bottom: -155px;
+    left: 0;
+  }
 }
 
 .hero__main-img {
@@ -255,5 +263,11 @@
     height: 220px;
     right: -7px;
     top: 92px;
+  }
+
+  @media (min-width: 1920px) {
+    right: 86px;
+    width: 705px;
+    top: -60px;
   }
 }
