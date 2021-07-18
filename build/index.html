@@ -307,7 +307,7 @@
 
   <fieldset>
     <label for="form-name">
-      <input type="text" minlength="2" maxlength="20" id="form-name" name="form-name" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]{2,20}" required="">
+      <input type="text" minlength="2" maxlength="20" id="form-name" name="form-name" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]{2,20}[/\s/]{0,1}[A-Za-zА-Яа-яЁё]{0,20}" required="">
     </label>
 
     <label for="form-tel">
@@ -346,7 +346,7 @@
 
   <fieldset>
     <label for="modal-form-name">
-      <input type="text" minlength="2" maxlength="20" id="modal-form-name" name="modal-form-name" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]{2,20}" required="">
+      <input type="text" minlength="2" maxlength="20" id="modal-form-name" name="modal-form-name" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]{2,20}[/\s/]{0,1}[A-Za-zА-Яа-яЁё]{0,20}" required="">
     </label>
 
     <label for="modal-form-tel">
