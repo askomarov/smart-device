@@ -45,13 +45,15 @@
   margin: 0;
   padding: 0;
   display: grid;
-  // grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
   column-gap: 30px;
   row-gap: 46px;
   grid-template-columns: repeat(3, 1fr);
 
   @media (max-width: $width-desktop+px) {
     grid-template-columns: 1fr;
+  }
+
+  @media (max-width: $width-tablet+px) {
     row-gap: 30px;
   }
 }

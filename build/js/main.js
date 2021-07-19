@@ -179,7 +179,7 @@ const initModalForm = () => {
       btnClose.addEventListener('click', (evt) => {
         evt.preventDefault();
         closeModal();
-      }, { once: true });
+      }, {once: true});
     };
 
     const onEscKeydownCloseModal = (evt) => {
@@ -235,7 +235,7 @@ const initModalForm = () => {
         localStorage.setItem('modal-tel', inputTelModalForm.value);
         localStorage.setItem('modal-mail', inputNameModalForm.value);
         onSuccessSubmit();
-      }, { once: true });
+      }, {once: true});
     };
 
     const onBtnShowModal = (btn) => {

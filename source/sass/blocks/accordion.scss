@@ -41,10 +41,10 @@
       }
 
       .accordion__content {
-        position: relative;
+        display: block;
         pointer-events: all;
-        transform: translateX(0);
-        transition: transform 0.3s ease 0s;
+        opacity: 1;
+        visibility: visible;
       }
     }
 
@@ -54,9 +54,7 @@
       }
 
       .accordion__content {
-        position: absolute;
-        transform: translateX(-50%);
-        transition: transform 0.3s ease 0s;
+        display: none;
         pointer-events: none;
         opacity: 0;
         visibility: hidden;

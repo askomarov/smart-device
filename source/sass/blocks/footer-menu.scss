@@ -4,6 +4,7 @@
   padding: 0;
   columns: 2;
   gap: 10px;
+  padding-right: calc(53 / 1920 * 100vw);
 
   a {
     font-family: $font-family-mono;
@@ -30,6 +31,7 @@
     columns: 1;
     gap: 0;
   }
+  
   @media (max-width: $width-tablet+px) {
     padding: 0 15px 28px;
   }
