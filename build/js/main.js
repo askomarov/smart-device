@@ -20,27 +20,32 @@ const accordion = (mainBtns) => {
     });
   });
 };
-const openAccordionMenu = (mainBtns) => {
-  mainBtns.forEach(btn => {
-    btn.parentElement.classList.remove('accordion--open');
-  });
-};
+
+// const openAccordionMenu = (mainBtns) => {
+//   mainBtns.forEach(btn => {
+//     btn.parentElement.classList.remove('accordion--open');
+//   });
+// };
+
 const closeAccordionMenu = (mainBtns) => {
   mainBtns.forEach(btn => {
     btn.parentElement.classList.remove('accordion--open');
   });
 };
-const onMobileShowFooterAccordionMenu = (mainBtns) => {
-  if (window.matchMedia('(max-width: 767.9px)').matches) {
-    closeAccordionMenu(mainBtns);
-    accordion(mainBtns);
-  } else {
-    openAccordionMenu(mainBtns);
-  }
-};
+
+// const onMobileShowFooterAccordionMenu = (mainBtns) => {
+//   if (window.matchMedia('(max-width: 768px)').matches) {
+//     closeAccordionMenu(mainBtns);
+//     accordion(mainBtns);
+//   } else {
+//     openAccordionMenu(mainBtns);
+//   }
+// };
+
 const initAccordion = () => {
   if (accordionBtns) {
-    onMobileShowFooterAccordionMenu(accordionBtns);
+    closeAccordionMenu(accordionBtns);
+    accordion(accordionBtns);
   }
 };
 // ////////////////  КОНЕЦ аккордион
@@ -174,7 +179,7 @@ const initModalForm = () => {
       btnClose.addEventListener('click', (evt) => {
         evt.preventDefault();
         closeModal();
-      }, {once: true});
+      }, { once: true });
     };
 
     const onEscKeydownCloseModal = (evt) => {
@@ -230,7 +235,7 @@ const initModalForm = () => {
         localStorage.setItem('modal-tel', inputTelModalForm.value);
         localStorage.setItem('modal-mail', inputNameModalForm.value);
         onSuccessSubmit();
-      }, {once: true});
+      }, { once: true });
     };
 
     const onBtnShowModal = (btn) => {
@@ -258,3 +263,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // модальное окно
   initModalForm();
 });
+
+// window.addEventListener('resize', () => {
+//   let windowWidth = window.innerWidth;
+//   if (windowWidth <= 769) {
+//     console.log('accor on');
+//     initAccordion();
+//   }
+// });

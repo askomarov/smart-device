@@ -45,13 +45,14 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  // grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
   column-gap: 30px;
   row-gap: 46px;
+  grid-template-columns: repeat(3, 1fr);
 
-  @media (max-width: $width-tablet+px) {
-    row-gap: 30px;
+  @media (max-width: $width-desktop+px) {
     grid-template-columns: 1fr;
+    row-gap: 30px;
   }
 }
 
@@ -113,12 +114,6 @@
   @media (hover) and (pointer: fine) {
     &:hover {
       box-shadow: 0 0 10px 0 $color-white;
-
-      .catalog-item__img-wrap {
-        img {
-          opacity: 0.5;
-        }
-      }
     }
   }
 }
@@ -137,7 +132,6 @@
     left: 0;
     z-index: 1;
     object-fit: cover;
-    opacity: 0.2;
     transition: $transition;
   }
 }

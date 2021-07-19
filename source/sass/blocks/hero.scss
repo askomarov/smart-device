@@ -258,6 +258,10 @@
     right: -205px;
   }
 
+  @media (max-width: 1450px) {
+    right: -156px;
+  }
+
   @media (max-width: $width-tablet+px) {
     width: 301px;
     height: 220px;

@@ -1,6 +1,6 @@
 .form {
   position: relative;
-  background: $primary-color;
+  background: transparent;
 
   &::after {
     content: "Форма успешно отправлена";
@@ -148,6 +148,11 @@
     &:focus,
     &:focus-within ~ .form__label-checkox {
       color: $color-white;
+      text-decoration: underline;
+      &::after {
+        outline: 1px solid #fff;
+        outline-offset: 3px;
+      }
     }
 
     &:active ~ .form__label-checkox {

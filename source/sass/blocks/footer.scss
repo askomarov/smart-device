@@ -139,7 +139,8 @@
   @media (max-width: $width-tablet+px) {
     margin: 0;
     border-top: 1px solid rgba($color: #626962, $alpha: 0.2);
-    padding: 29px 15px 27px;
+    // padding: 29px 15px 27px;
+    padding: 0;
   }
 }
 
@@ -159,7 +160,8 @@
   }
 
   @media (max-width: $width-tablet+px) {
-    margin: 0 0 32px;
+    padding: 29px 15px 27px;
+    margin: 0;
   }
 }
 
@@ -204,10 +206,20 @@
     margin: 0;
     border-top: 1px solid rgba($color: #626962, $alpha: 0.2);
     padding: 28px 15px 28px;
+    padding: 0;
     justify-self: stretch;
 
+    address {
+      padding: 0 15px;
+    }
+
     &.accordion--open {
+      padding-bottom: 32px;
       padding-bottom: 26px;
+
+      address {
+        padding-top: 4px;
+      }
     }
 
     p {
