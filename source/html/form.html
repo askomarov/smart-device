@@ -10,8 +10,8 @@
 
   <fieldset>
     <label for="{{ inputNameId }}">
-      <input type="text" minlength="2" maxlength="20" id="{{ inputNameId }}" name="{{ inputNameId }}" placeholder="Имя"
-        pattern="[\w\d]{2,30}[/\s/]{0,1}[\w\d]{0,30}" required>
+      <input type="text" minlength="2" id="{{ inputNameId }}" name="{{ inputNameId }}" placeholder="Имя"
+        pattern="[A-Za-zА-Яа-яЁё\d]{2,}[/\s/]{0,1}[A-Za-zА-Яа-яЁё\d]{0,}" required>
     </label>
 
     <label for="{{ inputTelId }}">

@@ -30,15 +30,23 @@
 }
 
 .header-menu {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  padding-left: 3px;
   gap: 5px;
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  align-items: center;
+  width: 100%;
+
+  @media (max-width: $width-desktop+px) {
+    grid-template-columns: min-content 1fr;
+    padding-left: 0;
+  }
 }
+
 .header-menu__logo-wrap {
-  flex: 1 1 auto;
   justify-items: flex-start;
 }
+
 .header-menu__logo {
   display: flex;
   align-items: center;
@@ -65,16 +73,15 @@
 }
 
 .header-menu__list {
-  // flex: 1 1 auto;
-  flex: 0 0 auto;
+  justify-self: end;
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   align-items: center;
-  // justify-content: flex-end;
   flex-wrap: wrap;
-  margin-right: 49px;
+  row-gap: 5px;
+  margin-right: 44px;
 
   @media (max-width: $width-desktop+px) {
     margin-right: 0;

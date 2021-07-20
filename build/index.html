@@ -307,7 +307,7 @@
 
   <fieldset>
     <label for="form-name">
-      <input type="text" minlength="2" maxlength="20" id="form-name" name="form-name" placeholder="Имя" pattern="[\w\d]{2,30}[/\s/]{0,1}[\w\d]{0,30}" required="">
+      <input type="text" minlength="2" id="form-name" name="form-name" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё\d]{2,}[/\s/]{0,1}[A-Za-zА-Яа-яЁё\d]{0,}" required="">
     </label>
 
     <label for="form-tel">
@@ -346,7 +346,7 @@
 
   <fieldset>
     <label for="modal-form-name">
-      <input type="text" minlength="2" maxlength="20" id="modal-form-name" name="modal-form-name" placeholder="Имя" pattern="[\w\d]{2,30}[/\s/]{0,1}[\w\d]{0,30}" required="">
+      <input type="text" minlength="2" id="modal-form-name" name="modal-form-name" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё\d]{2,}[/\s/]{0,1}[A-Za-zА-Яа-яЁё\d]{0,}" required="">
     </label>
 
     <label for="modal-form-tel">
@@ -375,93 +375,96 @@
 
   <footer class="footer">
 
-  <div class="footer__container container">
-    <!-- top -->
-    <div class="footer__top footer-top">
-      <a class="footer__logo">
-        <svg class="footer__logo-icon" width="216" height="52">
-          <use xlink:href="#icon_logo_footer"></use>
-        </svg>
-      </a>
-      <p class="footer__companydate footer__companydate--top">1999-2018 SD Service Devices</p>
-      <ul class="footer__social-list social-list">
-        <li class="social-list__item">
-          <a href="#" class="social-list__link" aria-label="ссылка на страницу в фейсбук">
-            <svg width="27" height="27">
-              <use xlink:href="#icon_fb"></use>
+
+    <div class="footer__head">
+
+        <div class="footer__top footer-top">
+          <a class="footer__logo">
+            <svg class="footer__logo-icon" width="216" height="52">
+              <use xlink:href="#icon_logo_footer"></use>
             </svg>
           </a>
-        </li>
-        <li class="social-list__item">
-          <a href="#" class="social-list__link" aria-label="ссылка на страницу в однаклассниках">
-            <svg width="27" height="27">
-              <use xlink:href="#icon_school"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a href="#" class="social-list__link" aria-label="ссылка на страницу в вконтакте">
-            <svg width="27" height="27">
-              <use xlink:href="#icon_vk"></use>
-            </svg>
-          </a>
-        </li>
+          <p class="footer__companydate footer__companydate--top">1999-2018 SD Service Devices</p>
+          <ul class="footer__social-list social-list">
+            <li class="social-list__item">
+              <a href="#" class="social-list__link" aria-label="ссылка на страницу в фейсбук">
+                <svg width="27" height="27">
+                  <use xlink:href="#icon_fb"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a href="#" class="social-list__link" aria-label="ссылка на страницу в однаклассниках">
+                <svg width="27" height="27">
+                  <use xlink:href="#icon_school"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a href="#" class="social-list__link" aria-label="ссылка на страницу в вконтакте">
+                <svg width="27" height="27">
+                  <use xlink:href="#icon_vk"></use>
+                </svg>
+              </a>
+            </li>
 
-      </ul>
+          </ul>
+        </div>
+
+
+        <div class="footer__middle footer-middle">
+          <div class="footer__menu footer-menu accordion accordion--open">
+            <h2 class="footer__title accordion__btn">разделы сайта</h2>
+            <ul class="footer-menu__list accordion__content">
+              <li>
+                <a href="#">О компании</a>
+              </li>
+              <li>
+                <a href="#">Продукты</a>
+              </li>
+              <li>
+                <a href="#">Производство печатных плат</a>
+              </li>
+              <li>
+                <a href="#">Монтаж печатных плат</a>
+              </li>
+              <li>
+                <a href="#">Комплектующие</a>
+              </li>
+              <li>
+                <a href="#">Доставка</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__address accordion accordion--open">
+            <h2 class="footer__title accordion__btn">наш офис</h2>
+            <address class="accordion__content">
+              <p>г. Мытищи, Олимпийский проспект, д.10</p>
+              <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+              <a href="tel:+79250038767">+7 (925) 003-87-67</a>
+              <a href="tel:+79269268079">+7 (926) 926-080-79</a>
+            </address>
+          </div>
+        </div>
+
     </div>
 
-    <!-- middle -->
-    <div class="footer__middle footer-middle">
-      <div class="footer__menu footer-menu accordion accordion--open">
-        <h2 class="footer__title accordion__btn">разделы сайта</h2>
-        <ul class="footer-menu__list accordion__content">
-          <li>
-            <a href="#">О компании</a>
-          </li>
-          <li>
-            <a href="#">Продукты</a>
-          </li>
-          <li>
-            <a href="#">Производство печатных плат</a>
-          </li>
-          <li>
-            <a href="#">Монтаж печатных плат</a>
-          </li>
-          <li>
-            <a href="#">Комплектующие</a>
-          </li>
-          <li>
-            <a href="#">Доставка</a>
-          </li>
-          <li>
-            <a href="#">Контакты</a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer__address accordion accordion--open">
-        <h2 class="footer__title accordion__btn">наш офис</h2>
-        <address class="accordion__content">
-          <p>г. Мытищи, Олимпийский проспект, д.10</p>
-          <a href="tel:+74955894050">+7 (495) 589-40-50</a>
-          <a href="tel:+79250038767">+7 (925) 003-87-67</a>
-          <a href="tel:+79269268079">+7 (926) 926-080-79</a>
-        </address>
+    <div class="footer__container footer__container--bottom">
+      <div class="footer__bottom footer-bottom">
+        <p class="footer__copy">Все права защищены</p>
+        <p class="footer__companydate">1999-2018 SD Service Devices</p>
+        <div class="footer__policy-link">
+          <a href="#" class=" footer-textlink">Условия конфиденциальности</a>
+        </div>
+        <div class="footer__devby">
+          <a href="#" class="footer-textlink">Developed by wow studio</a>
+        </div>
       </div>
     </div>
 
-    <!-- bottom -->
-    <div class="footer__bottom footer-bottom">
-      <p class="footer__copy">Все права защищены</p>
-      <p class="footer__companydate">1999-2018 SD Service Devices</p>
-      <div class="footer__policy-link">
-        <a href="#" class=" footer-textlink">Условия конфиденциальности</a>
-      </div>
-      <div class="footer__devby">
-        <a href="#" class="footer-textlink">Developed by wow studio</a>
-      </div>
-    </div>
-
-  </div>
 </footer>
 
 
